@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: app
+          image: nginx
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "512Mi"
+        - name: sidecar
+          image: busybox
+          # Missing requests to trigger defaults
+      volumes:
+        - name: shared-cache
+          persistentVolumeClaim:
+            claimName: shared-cache
+

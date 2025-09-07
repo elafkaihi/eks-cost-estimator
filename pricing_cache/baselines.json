@@ -1,0 +1,6 @@
+{
+  "us-east-1": { "m6i.large": {"price": 0.096, "vcpu": 2, "memory_gb": 8} },
+  "us-west-2": { "m6i.large": {"price": 0.096, "vcpu": 2, "memory_gb": 8} },
+  "eu-west-1": { "m6i.large": {"price": 0.107, "vcpu": 2, "memory_gb": 8} },
+  "eu-west-3": { "m6i.large": {"price": 0.119, "vcpu": 2, "memory_gb": 8} }
+}
